@@ -1,0 +1,254 @@
+/* ========================================
+   TOKENS
+   Define your design decisions here.
+   Everything else in this file should
+   reference these tokens with var().
+   ======================================== */
+:root {
+    --page-background: #f2efe8;
+    --surface-background: #fffaf3;
+    --surface-contrast: #eef4f7;
+    --text-color: #203040;
+    --muted-text: #617187;
+    --link-color: #215f8b;
+    --link-hover-color: #0f3d59;
+    --accent-color: #9f6a2f;
+    --accent-soft: #f1dcc0;
+    --section-divider: rgba(32, 48, 64, 0.12);
+
+    --space-sm: 0.625rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2.5rem;
+
+    --body-font: "Aptos", "Segoe UI", sans-serif;
+    --heading-font: "Georgia", serif;
+    --body-size: 1rem;
+
+    --card-radius: 1.1rem;
+    --pill-radius: 999px;
+    --content-width: 72rem;
+    --card-shadow: 0 18px 40px rgba(32, 48, 64, 0.12);
+}
+
+/* ========================================
+   RESET
+   A minimal reset so you start clean.
+   ======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   BASE STYLES
+   Style the body, links, and any raw
+   HTML elements here. Use nesting.
+   ======================================== */
+body {
+    font-family: var(--body-font, system-ui, sans-serif);
+    font-size: var(--body-size);
+    line-height: 1.6;
+    color: var(--text-color);
+    background:
+        radial-gradient(circle at top left, rgba(159, 106, 47, 0.12), transparent 34%),
+        linear-gradient(180deg, #f7f3eb 0%, var(--page-background) 42%, #ece8e0 100%);
+    padding: clamp(1rem, 2.5vw, 2.5rem);
+
+    main {
+        width: min(100%, var(--content-width));
+        margin-inline: auto;
+        display: grid;
+        gap: var(--space-xl);
+    }
+
+    a {
+        color: var(--link-color);
+        text-decoration-thickness: 0.12em;
+        text-underline-offset: 0.18em;
+
+        &:hover,
+        &:focus-visible {
+            color: var(--link-hover-color);
+        }
+    }
+}
+
+/* ========================================
+   NAVIGATION
+   Style .site-nav so students can get
+   back to the homepage.
+   ======================================== */
+.site-nav {
+    width: min(100%, var(--content-width));
+    margin-inline: auto;
+    margin-bottom: var(--space-lg);
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        border-radius: var(--pill-radius);
+        background: var(--surface-background);
+        border: 1px solid var(--section-divider);
+        text-decoration: none;
+        box-shadow: var(--card-shadow, 0 10px 24px rgba(32, 48, 64, 0.08));
+
+        &:hover,
+        &:focus-visible {
+            background: var(--surface-contrast);
+        }
+    }
+}
+
+/* ========================================
+   BOARD HEADER
+   Style the page header area.
+   ======================================== */
+.board-header {
+    width: min(100%, var(--content-width));
+    margin-inline: auto;
+    text-align: center;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: var(--space-xl);
+
+    h1 {
+        font-family: var(--heading-font);
+        font-size: clamp(2.25rem, 5vw, 4.75rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        margin-bottom: var(--space-md);
+        color: var(--text-color);
+    }
+
+    p {
+        max-width: 40rem;
+        margin-inline: auto;
+        color: var(--muted-text);
+        font-size: clamp(1rem, 1.2vw, 1.1rem);
+    }
+}
+
+/* ========================================
+   CARD GROUP
+   Each section of cards (This Week,
+   Coming Up, Announcements).
+   ======================================== */
+.card-group {
+    margin-bottom: var(--space-xl);
+
+    h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(1.35rem, 2vw, 2rem);
+        margin-bottom: var(--space-lg);
+        color: var(--text-color);
+        position: relative;
+        padding-bottom: var(--space-sm);
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset-inline-start: 0;
+            inset-block-end: 0;
+            width: 4rem;
+            height: 0.18rem;
+            border-radius: var(--pill-radius);
+            background: var(--accent-color);
+        }
+    }
+}
+
+/* ========================================
+   CARDS GRID
+   Layout the .cards container as a
+   responsive grid or flex layout.
+   ======================================== */
+.cards {
+    display: grid;
+    gap: calc(var(--space-md) * 1.5);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.5rem), 1fr));
+}
+
+/* ========================================
+   INDIVIDUAL CARD
+   Style each .card article. This is where
+   most of your nesting will happen.
+   ======================================== */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    min-height: 100%;
+    padding: clamp(1.1rem, 2vw, 1.5rem);
+    border-radius: var(--card-radius);
+    background: var(--card-surface, var(--surface-background));
+    border: 1px solid rgba(32, 48, 64, 0.08);
+    box-shadow: var(--card-shadow);
+
+    .card-tag {
+        width: fit-content;
+        padding: 0.35rem 0.8rem;
+        border-radius: var(--pill-radius);
+        background: var(--accent-soft);
+        color: var(--accent-color);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-family: var(--heading-font);
+        font-size: 1.35rem;
+        line-height: 1.2;
+        color: var(--text-color);
+    }
+
+    p {
+        color: var(--muted-text);
+        flex-grow: 1;
+    }
+
+    .card-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-md);
+        padding-top: var(--space-md);
+        border-top: 1px solid var(--section-divider);
+
+        span {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        a {
+            font-weight: 700;
+            text-decoration: none;
+
+            &:hover,
+            &:focus-visible {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* ========================================
+   FOOTER
+   Style the .board-footer at the bottom.
+   ======================================== */
+.board-footer {
+    width: min(100%, var(--content-width));
+    margin-inline: auto;
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    text-align: center;
+    color: var(--muted-text);
+    border-top: 1px solid var(--section-divider);
+}

@@ -25,6 +25,35 @@ body {
     padding: var(--space-lg);
 }
 
+nav {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 42rem;
+
+    h2 {
+        font-size: 1rem;
+        margin-bottom: var(--space-sm);
+    }
+
+    ul {
+        list-style: none;
+        display: grid;
+        gap: var(--space-sm);
+    }
+
+    a {
+        color: var(--color-primary);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--color-primary-hover);
+            text-decoration: underline;
+        }
+    }
+}
+
 a {
     color: var(--color-primary);
 }
