@@ -21,7 +21,7 @@
         background-color: var(--color-surface);
         border-radius: var(--border-radius);
         box-shadow: var(--shadow-sm);
-        border-left: 4px solid var(--color-primary);
+        border-left: var(--border-left-accent) solid var(--color-accent);
         margin-bottom: 0;
 
         @media (max-width: 640px) {
@@ -34,7 +34,8 @@
 
 .temple-name {
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-text);
+    font-family: var(--font-family-serif);
     flex: 1;
 }
 
@@ -54,7 +55,7 @@
     }
 
     &.construction {
-        background-color: var(--color-accent);
-        color: var(--color-surface);
+        background-color: var(--color-warm);
+        color: var(--color-text);
     }
 }

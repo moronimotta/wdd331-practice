@@ -18,8 +18,9 @@
 
     label {
         font-weight: 600;
-        color: var(--color-primary);
+        color: var(--color-text);
         font-size: 0.95rem;
+        font-family: var(--font-family-serif);
     }
 
     input,
@@ -31,6 +32,8 @@
         background-color: #fafaf8;
         transition: all 150ms ease;
         line-height: var(--line-height-normal);
+        font-family: var(--font-family);
+        color: var(--color-text);
 
         &:hover:not(:disabled) {
             border-color: var(--color-primary);
@@ -59,7 +62,7 @@
     select {
         cursor: pointer;
         appearance: none;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c5aa0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23AFC4D6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
         background-repeat: no-repeat;
         background-position: right var(--space-sm) center;
         background-size: 1.5em;
