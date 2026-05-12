@@ -26,11 +26,12 @@
         color: var(--color-surface);
 
         &:hover:not(:disabled) {
-            background-color: var(--color-accent);
+            background-color: var(--color-warm);
+            color: var(--color-text);
         }
 
         &:focus-visible {
-            outline: var(--border-width) solid var(--color-focus);
+            outline: var(--border-width) solid var(--color-text);
             outline-offset: 2px;
         }
     }
