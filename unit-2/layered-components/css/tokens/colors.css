@@ -1,13 +1,13 @@
-/* Color tokens: LDS-inspired palette
-   Calm, reverent, and approachable with warmth and brightness. */
+/* Color tokens: Slate blue color palette
+   Calm, professional, and contemplative. */
 :root {
-    --color-primary: #AFC4D6;
+    --color-primary: #5F8CB4;
     --color-background: #F8F7F3;
-    --color-text: #333331;
-    --color-accent: #CED7A6;
+    --color-text: #103A5E;
+    --color-accent: #7694A6;
     --color-surface: #FFFFFF;
-    --color-border: #E8E5DB;
-    --color-success: #CED7A6;
-    --color-warm: #F1E6BE;
-    --color-focus: #ABC0CF;
+    --color-border: #BDD0DE;
+    --color-success: #7694A6;
+    --color-warm: #BDD0DE;
+    --color-focus: #527592;
 }
