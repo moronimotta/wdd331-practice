@@ -1,0 +1,67 @@
+/* Navigation component: .site-nav and its links
+   Style the active link using aria-current. */
+
+.site-nav {
+    background-color: var(--color-primary);
+    padding: var(--space-md) 0;
+    box-shadow: var(--shadow-md);
+
+    a,
+    ul {
+        max-width: 64rem;
+        margin-inline: auto;
+        padding-inline: var(--space-md);
+    }
+
+    a:first-child {
+        color: var(--color-surface);
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: var(--space-md);
+
+        &:hover {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        &:focus-visible {
+            outline: var(--border-width) solid var(--color-accent);
+            outline-offset: 2px;
+            border-radius: var(--border-radius-sm);
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: var(--space-lg);
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 500;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--border-radius-sm);
+        transition: all 150ms ease;
+
+        &:hover {
+            color: var(--color-surface);
+            background-color: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        &[aria-current="page"] {
+            color: var(--color-accent);
+            background-color: rgba(255, 255, 255, 0.15);
+            font-weight: 600;
+        }
+
+        &:focus-visible {
+            outline: var(--border-width) solid var(--color-accent);
+            outline-offset: 2px;
+        }
+    }
+}
