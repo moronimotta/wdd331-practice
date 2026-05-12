@@ -1,0 +1,68 @@
+/* Form components: .note-form, .form-field, inputs, textarea, select
+   Use native nesting. Add :focus-visible styles to all inputs. */
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    background-color: var(--color-surface);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+    label {
+        font-weight: 600;
+        color: var(--color-primary);
+        font-size: 0.95rem;
+    }
+
+    input,
+    textarea,
+    select {
+        padding: var(--space-sm) var(--space-md);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius);
+        background-color: #fafaf8;
+        transition: all 150ms ease;
+        line-height: var(--line-height-normal);
+
+        &:hover:not(:disabled) {
+            border-color: var(--color-primary);
+        }
+
+        &:focus-visible {
+            outline: var(--border-width) solid var(--color-focus);
+            outline-offset: 2px;
+            background-color: var(--color-surface);
+            border-color: var(--color-focus);
+        }
+
+        &:disabled {
+            background-color: #e8e8e8;
+            color: #999;
+            cursor: not-allowed;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+        font-family: var(--font-family);
+    }
+
+    select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c5aa0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right var(--space-sm) center;
+        background-size: 1.5em;
+        padding-right: 2.5rem;
+    }
+}
