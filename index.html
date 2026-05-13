@@ -3,33 +3,58 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moroni Motta - Practice Site</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Moroni Motta - WDD 331R Advanced CSS</title>
+    <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <h1>Moroni Motta</h1>
+        <p class="text-muted">WDD 331R Advanced CSS - Spring 2026</p>
     </header>
-    <nav>
-        <h2>Assignments</h2>
-        <ul>
-            <li>
-                <a href="unit-1/custom-properties/index.html">
-                    Custom Properties and Nesting
-                </a>
-            </li>
-            <li>
-                <a href="unit-2/layered-components/index.html">
-                    Layered Components
-                </a>
-            </li>
-        </ul>
-    </nav>
+
     <main>
-        <p>
-            My name is Moroni Motta. I'm from Brazil and currently pursuing a degree in Software Engineering. Welcome to my WDD 331R practice site. I am using this space to build and improve
-            my CSS and front-end skills throughout the semester.
-        </p>
+        <section class="hero stack-md">
+            <h2>Course Projects & Assignments</h2>
+            <p>A comprehensive showcase of CSS architecture, design tokens, and advanced layout techniques developed throughout the semester.</p>
+        </section>
+
+        <section class="card-group">
+            <h3>Unit 1: Custom Properties</h3>
+            <div class="cards">
+                <article class="assignment-card">
+                    <h4>Custom Properties Architecture</h4>
+                    <p>Built a design system using CSS custom properties, establishing color palettes, spacing scales, and typography standards that serve as the foundation for all other projects.</p>
+                    <a href="unit-1/custom-properties/index.html">View Project →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="card-group">
+            <h3>Unit 2: Layered Components</h3>
+            <div class="cards">
+                <article class="assignment-card">
+                    <h4>Layered CSS Architecture</h4>
+                    <p>Implemented a five-layer CSS architecture (tokens, base, layout, components, utilities) with organized file structure and layer declarations for scalable design systems.</p>
+                    <a href="unit-2/layered-components/index.html">View Project →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="card-group">
+            <h3>Architecture Overview</h3>
+            <p class="text-muted">This site demonstrates the complete CSS architecture in action:</p>
+            <ul class="stack-md">
+                <li><strong>Tokens:</strong> Shared design tokens (colors, spacing, typography, shadows) defined across the site</li>
+                <li><strong>Base:</strong> Element resets and semantic styling</li>
+                <li><strong>Layout:</strong> Page structure and responsive grid systems</li>
+                <li><strong>Components:</strong> Reusable UI components (cards, navigation)</li>
+                <li><strong>Utilities:</strong> Helper classes for spacing and text styling</li>
+            </ul>
+        </section>
     </main>
+
+    <footer style="text-align: center; margin-top: var(--space-2xl); padding: var(--space-lg) 0; border-top: 1px solid rgba(0,0,0,0.1); color: var(--color-text-muted); font-size: 0.875rem;">
+        <p>Built with CSS Layers, Lightning CSS, and responsive design principles</p>
+    </footer>
 </body>
 </html>
