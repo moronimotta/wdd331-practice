@@ -9,7 +9,7 @@
         --color-primary-hover: #0f3d59;
         --color-accent: #9f6a2f;
         --color-accent-soft: #f1dcc0;
-    --color-border: rgba(32, 48, 64, 0.14);
-    --color-ring: rgba(33, 95, 139, 0.28);
-}
+        --color-border: rgba(32, 48, 64, 0.14);
+        --color-ring: rgba(33, 95, 139, 0.28);
+    }
 }

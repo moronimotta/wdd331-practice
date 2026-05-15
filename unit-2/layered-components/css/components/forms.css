@@ -1,6 +1,3 @@
-/* Form components: .note-form, .form-field, inputs, textarea, select
-   Use native nesting. Add :focus-visible styles to all inputs. */
-
 .note-form {
     display: flex;
     flex-direction: column;

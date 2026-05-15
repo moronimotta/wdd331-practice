@@ -7,54 +7,72 @@
     <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1>Moroni Motta</h1>
-        <p class="text-muted">WDD 331R Advanced CSS - Spring 2026</p>
-    </header>
+    <div class="site-shell">
+        <header class="site-header">
+            <p class="text-muted">WDD 331R Advanced CSS</p>
+            <h1>Moroni Motta</h1>
+            <p class="hero-text">A responsive practice site for layered CSS, shared design tokens, and bundled production styles.</p>
 
-    <main>
-        <section class="hero stack-md">
-            <h2>Course Projects & Assignments</h2>
-            <p>A comprehensive showcase of CSS architecture, design tokens, and advanced layout techniques developed throughout the semester.</p>
-        </section>
+            <nav class="site-nav" aria-label="Project links">
+                <ul>
+                    <li><a href="#assignments">Assignments</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="unit-1/custom-properties/index.html">Unit 1</a></li>
+                    <li><a href="unit-2/layered-components/index.html">Unit 2</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <section class="card-group">
-            <h3>Unit 1: Custom Properties</h3>
-            <div class="cards">
-                <article class="assignment-card">
-                    <h4>Custom Properties Architecture</h4>
-                    <p>Built a design system using CSS custom properties, establishing color palettes, spacing scales, and typography standards that serve as the foundation for all other projects.</p>
-                    <a href="unit-1/custom-properties/index.html">View Project →</a>
-                </article>
-            </div>
-        </section>
+        <main>
+            <section class="hero stack-md" id="assignments">
+                <h2>Completed Work</h2>
+                <p>Each project below links to a completed assignment or choose-topic page from the semester so far.</p>
+            </section>
 
-        <section class="card-group">
-            <h3>Unit 2: Layered Components</h3>
-            <div class="cards">
-                <article class="assignment-card">
-                    <h4>Layered CSS Architecture</h4>
-                    <p>Implemented a five-layer CSS architecture (tokens, base, layout, components, utilities) with organized file structure and layer declarations for scalable design systems.</p>
-                    <a href="unit-2/layered-components/index.html">View Project →</a>
-                </article>
-            </div>
-        </section>
+            <section class="card-group">
+                <h3>Assignments</h3>
+                <div class="cards">
+                    <article class="assignment-card">
+                        <p class="text-muted">Unit 1</p>
+                        <h4>Custom Properties Architecture</h4>
+                        <p>Built a design system using CSS custom properties, establishing color palettes, spacing scales, and typography standards that serve as the foundation for the rest of the site.</p>
+                        <a href="unit-1/custom-properties/index.html">View Project</a>
+                    </article>
 
-        <section class="card-group">
-            <h3>Architecture Overview</h3>
-            <p class="text-muted">This site demonstrates the complete CSS architecture in action:</p>
-            <ul class="stack-md">
-                <li><strong>Tokens:</strong> Shared design tokens (colors, spacing, typography, shadows) defined across the site</li>
-                <li><strong>Base:</strong> Element resets and semantic styling</li>
-                <li><strong>Layout:</strong> Page structure and responsive grid systems</li>
-                <li><strong>Components:</strong> Reusable UI components (cards, navigation)</li>
-                <li><strong>Utilities:</strong> Helper classes for spacing and text styling</li>
-            </ul>
-        </section>
-    </main>
+                    <article class="assignment-card">
+                        <p class="text-muted">Unit 2</p>
+                        <h4>Layered CSS Architecture</h4>
+                        <p>Implemented a five-layer CSS architecture with organized files for tokens, base, layout, components, and utilities, then bundled it through Lightning CSS.</p>
+                        <a href="unit-2/layered-components/index.html">View Project</a>
+                    </article>
+                </div>
+            </section>
 
-    <footer style="text-align: center; margin-top: var(--space-2xl); padding: var(--space-lg) 0; border-top: 1px solid rgba(0,0,0,0.1); color: var(--color-text-muted); font-size: 0.875rem;">
-        <p>Built with CSS Layers, Lightning CSS, and responsive design principles</p>
-    </footer>
+            <section class="card-group" id="architecture">
+                <h3>Architecture Overview</h3>
+                <div class="cards">
+                    <article class="assignment-card">
+                        <h4>Tokens</h4>
+                        <p>Shared color, spacing, type, radius, and shadow values drive the entire design system.</p>
+                    </article>
+
+                    <article class="assignment-card">
+                        <h4>Base and Layout</h4>
+                        <p>Reset styles, semantic element styles, and page structure rules keep the site consistent and responsive.</p>
+                    </article>
+
+                    <article class="assignment-card">
+                        <h4>Components and Utilities</h4>
+                        <p>Reusable cards, navigation, and helper classes keep the homepage scalable as new assignments are added.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Built with CSS Layers and Lightning CSS.</p>
+            <p>Bundled stylesheet: dist/styles.css</p>
+        </footer>
+    </div>
 </body>
 </html>

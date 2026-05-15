@@ -1,25 +1,10 @@
 {
   "name": "wdd331-practice",
   "version": "1.0.0",
-  "description": "**Student:** Moroni Motta   **Semester:** Spring 2026   **Live Site:** [View Site](https://moronimotta.github.io/wdd331-practice/)",
-  "main": "index.js",
   "scripts": {
     "build": "node build.js",
-    "watch": "node build.js && node -e \"require('fs').watch('css', { recursive: true }, () => require('child_process').exec('node build.js'))\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "node build.js && node -e \"require('fs').watch('css', { recursive: true }, () => require('child_process').exec('node build.js'))\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/moronimotta/wdd331-practice.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/moronimotta/wdd331-practice/issues"
-  },
-  "homepage": "https://github.com/moronimotta/wdd331-practice#readme",
   "devDependencies": {
     "lightningcss": "^1.32.0"
   }

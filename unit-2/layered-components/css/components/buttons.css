@@ -1,6 +1,3 @@
-/* Button components: .btn, .primary, .secondary, disabled state
-   Use native nesting for pseudo-classes and modifiers. */
-
 .button-group {
     display: flex;
     flex-wrap: wrap;
