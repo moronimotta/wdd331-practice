@@ -20,4 +20,3 @@ if (!fs.existsSync(destDir)) {
 }
 
 fs.writeFileSync(outputPath, code);
-console.log(`✓ Built ${outputPath}`);
