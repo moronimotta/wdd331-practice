@@ -1,6 +1,3 @@
-/* Navigation component: .site-nav and its links
-   Style the active link using aria-current. */
-
 .site-nav {
     background-color: var(--color-primary);
     padding: var(--space-md) 0;

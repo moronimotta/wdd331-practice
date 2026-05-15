@@ -1,5 +1,3 @@
-/* Non-color tokens: spacing, typography, borders, shadows.
-   These values should be referenced by every other layer. */
 :root {
     
     --space-xs: 0.25rem;
@@ -9,7 +7,6 @@
     --space-xl: 3rem;
     --space-2xl: 4rem;
 
-   /*  I used the church website as inspiration for fonts */
     --font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
     --font-family-serif: Georgia, "Times New Roman", serif;
     --line-height-tight: 1.2;

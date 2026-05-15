@@ -1,6 +1,3 @@
-/* Temple list component: .temples, .temple-name, .temple-status
-   Style the status badges differently based on class (.open, .construction). */
-
 .temple-list {
     margin-bottom: var(--space-xl);
 }

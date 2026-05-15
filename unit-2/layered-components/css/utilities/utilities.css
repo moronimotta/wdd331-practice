@@ -1,7 +1,3 @@
-/* Utility classes: single-purpose helpers.
-   These live in the last layer so they override components
-   by layer order without needing !important. */
-
 .sr-only {
     position: absolute;
     width: 1px;

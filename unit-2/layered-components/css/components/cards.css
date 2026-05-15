@@ -1,6 +1,3 @@
-/* Card components: .card-group, .cards grid, .card, .card-tag, .card-footer
-   Use native nesting. Reference tokens with var(). */
-
 .card-group {
     margin-bottom: var(--space-xl);
 }
