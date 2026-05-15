@@ -1,0 +1,15 @@
+@layer tokens {
+    :root {
+        --color-bg: #f2efe8;
+        --color-surface: #fffaf3;
+        --color-surface-strong: #ffffff;
+        --color-text: #203040;
+        --color-text-muted: #617187;
+        --color-primary: #215f8b;
+        --color-primary-hover: #0f3d59;
+        --color-accent: #9f6a2f;
+        --color-accent-soft: #f1dcc0;
+    --color-border: rgba(32, 48, 64, 0.14);
+    --color-ring: rgba(33, 95, 139, 0.28);
+}
+}

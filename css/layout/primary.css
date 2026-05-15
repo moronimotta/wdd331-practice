@@ -1,0 +1,27 @@
+@layer layout {
+    .site-shell {
+        width: min(100% - (var(--space-md) * 2), var(--content-max));
+        margin-inline: auto;
+        padding-block: clamp(var(--space-lg), 4vw, var(--space-2xl));
+        display: grid;
+        gap: var(--space-xl);
+    }
+
+    .hero {
+        display: grid;
+        gap: var(--space-md);
+    }
+
+    .hero p {
+        max-width: 62ch;
+        color: var(--color-text-muted);
+        font-size: 1.125rem;
+    }
+
+    main {
+        width: min(100%, var(--content-width));
+        margin-inline: auto;
+        display: grid;
+        gap: var(--space-xl);
+    }
+}

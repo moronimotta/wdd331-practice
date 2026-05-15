@@ -1,63 +1,14 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@layer tokens, base, layout, components, utilities;
 
-:root {
-    --color-bg: #f4f6f8;
-    --color-text: #1e293b;
-    --color-primary: #006eb6;
-    --color-primary-hover: #004f7f;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --font-body: system-ui, -apple-system, sans-serif;
-}
+@import url("tokens/colors.css") layer(tokens);
+@import url("tokens/variables.css") layer(tokens);
 
-body {
-    font-family: var(--font-body);
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    line-height: 1.6;
-    padding: var(--space-lg);
-}
+@import url("base/reset.css") layer(base);
+@import url("base/elements.css") layer(base);
 
-nav {
-    margin-top: var(--space-lg);
-    padding: var(--space-md);
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.7);
-    max-width: 42rem;
+@import url("layout/primary.css") layer(layout);
 
-    h2 {
-        font-size: 1rem;
-        margin-bottom: var(--space-sm);
-    }
+@import url("components/nav.css") layer(components);
+@import url("components/cards.css") layer(components);
 
-    ul {
-        list-style: none;
-        display: grid;
-        gap: var(--space-sm);
-    }
-
-    a {
-        color: var(--color-primary);
-        text-decoration: none;
-
-        &:hover {
-            color: var(--color-primary-hover);
-            text-decoration: underline;
-        }
-    }
-}
-
-a {
-    color: var(--color-primary);
-}
-
-a:hover {
-    color: var(--color-primary-hover);
-}
+@import url("utilities/utilities.css") layer(utilities);

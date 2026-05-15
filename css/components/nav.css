@@ -1,0 +1,26 @@
+@layer components {
+    .site-nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+
+    .site-nav a {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.65rem 0.95rem;
+        border-radius: var(--radius-pill);
+        text-decoration: none;
+        color: var(--color-primary);
+        background: color-mix(in oklab, var(--color-surface) 82%, white);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }
+}
