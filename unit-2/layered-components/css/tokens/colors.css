@@ -1,11 +1,59 @@
 :root {
-    --color-primary: #5F8CB4;
-    --color-background: #F8F7F3;
-    --color-text: #103A5E;
-    --color-accent: #7694A6;
-    --color-surface: #FFFFFF;
-    --color-border: #BDD0DE;
-    --color-success: #7694A6;
-    --color-warm: #BDD0DE;
-    --color-focus: #527592;
+    color-scheme: light;
+
+    --seed-bg: #f8f7f3;
+    --seed-surface: #ffffff;
+    --seed-text: #103a5e;
+    --seed-text-muted: #5f7086;
+    --seed-accent: oklch(0.55 0.17 245);
+    --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --seed-link: var(--seed-accent);
+    --seed-link-hover: var(--seed-accent-hover);
+    --seed-border: #bdd0de;
+    --seed-border-strong: #9fb8ca;
+
+    --accent-200: color-mix(in oklch, var(--seed-accent) 30%, white);
+    --accent-300: color-mix(in oklch, var(--seed-accent) 50%, white);
+    --accent-400: color-mix(in oklch, var(--seed-accent) 75%, white);
+    --accent-500: var(--seed-accent);
+    --accent-600: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --accent-700: color-mix(in oklch, var(--seed-accent) 60%, black);
+    --accent-800: color-mix(in oklch, var(--seed-accent) 40%, black);
+
+    --color-bg: light-dark(var(--seed-bg), oklch(0.18 0.02 245));
+    --color-surface: light-dark(var(--seed-surface), oklch(0.22 0.03 245));
+    --color-surface-strong: light-dark(#ffffff, oklch(0.26 0.03 245));
+    --color-text: light-dark(var(--seed-text), oklch(0.9 0.02 245));
+    --color-text-muted: light-dark(var(--seed-text-muted), oklch(0.68 0.03 245));
+    --color-accent: light-dark(var(--seed-accent), oklch(0.62 0.15 240));
+    --color-accent-hover: light-dark(var(--seed-accent-hover), oklch(0.68 0.18 240));
+    --color-link: light-dark(var(--seed-link), oklch(0.65 0.16 240));
+    --color-link-hover: light-dark(var(--seed-link-hover), oklch(0.72 0.18 240));
+    --color-border: light-dark(var(--seed-border), oklch(0.32 0.02 245));
+    --color-border-strong: light-dark(var(--seed-border-strong), oklch(0.38 0.02 245));
+    --color-ring: color-mix(in srgb, var(--color-accent) 28%, transparent);
+    --header-bg: var(--color-accent);
+    --header-text: light-dark(#ffffff, #f0f4f8);
+    --theme-toggle-bg: color-mix(in srgb, var(--header-text) 20%, var(--header-bg));
+    --theme-toggle-border: color-mix(in srgb, var(--header-text) 40%, var(--header-bg));
+    --theme-toggle-bg-hover: color-mix(in srgb, var(--header-text) 30%, var(--header-bg));
+    --theme-toggle-border-hover: color-mix(in srgb, var(--header-text) 55%, var(--header-bg));
+    accent-color: var(--color-accent);
+
+    --color-primary: var(--color-link);
+    --color-primary-hover: var(--color-link-hover);
+    --color-background: var(--color-bg);
+    --color-success: var(--color-accent);
+    --color-warm: var(--color-border-strong);
+    --color-focus: var(--color-accent);
+}
+
+html:has(input[name='theme-preference'][value='dark']:checked) {
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:has(input[name='theme-preference'][value='system']:checked) {
+        color-scheme: dark;
+    }
 }

@@ -9,7 +9,7 @@
         font-size: var(--font-size-base);
         line-height: var(--line-normal);
         color: var(--color-text);
-        background: radial-gradient(circle at top left, rgba(159, 106, 47, 0.12), transparent 34%), linear-gradient(180deg, #f7f3eb 0%, var(--color-bg) 42%, #ece8e0 100%);
+        background: radial-gradient(circle at top left, color-mix(in oklch, var(--color-accent) 18%, transparent), transparent 34%), linear-gradient(180deg, color-mix(in oklch, var(--color-surface) 92%, var(--color-bg)) 0%, var(--color-bg) 42%, color-mix(in oklch, var(--color-bg) 94%, var(--color-surface)) 100%);
         padding: clamp(1rem, 2.5vw, 2.5rem);
     }
 

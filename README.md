@@ -4,7 +4,7 @@
 **Live Site:** [View Site](https://moronimotta.github.io/wdd331-practice/)
 
 ## About
-This repository is my Practice Site for WDD 331R: Advanced CSS. Each week I add new pages and styles as I work through the course assignments. The site is built with a scalable CSS architecture using layers, design tokens, and a build pipeline. It deploys automatically to GitHub Pages on every push to main.
+This repository is my Practice Site for WDD 331R: Advanced CSS. Each week I add new pages and styles as I work through the course assignments. The site is built with a scalable CSS architecture using layers, design tokens, a bundled production stylesheet, and a working light/dark theme toggle. It deploys automatically to GitHub Pages on every push to main.
 
 ## Project Structure
 ```
@@ -19,10 +19,14 @@ css/
 │   └── primary.css      # Main container and grid layout
 ├── components/          # Reusable UI components
 │   ├── cards.css        # Card component
-│   └── nav.css          # Navigation component
+│   ├── nav.css          # Navigation component
+│   └── theme-toggle.css # Theme toggle component
 ├── utilities/           # Helper utilities
 │   └── utilities.css    # Utility classes
 └── main.css             # Layer declaration and imports
+
+js/
+└── theme-preference.js   # Theme persistence script
 
 dist/
 └── styles.css           # Bundled and minified output (generated)
@@ -30,15 +34,16 @@ dist/
 
 ## CSS Architecture
 
-1. **Tokens** - Design system variables (colors, spacing, typography)
+1. **Tokens** - Design system variables for color, spacing, typography, and motion
 2. **Base** - Element resets and foundational styling
 3. **Layout** - Page structure and spatial relationships
-4. **Components** - Reusable UI patterns
+4. **Components** - Reusable UI patterns, including the theme toggle
 5. **Utilities** - Single-purpose helper classes
 
 
 ## Build Tool
 - **Tool:** Lightning CSS (lightningcss)
+- **Theme:** Light, dark, and system color modes driven by `js/theme-preference.js`
 
 
 ## Development Workflow
@@ -52,6 +57,12 @@ npm install
 Generate the minified CSS bundle:
 ```bash
 npm run build
+```
+
+### Watch During Development
+Rebuild automatically when source CSS changes:
+```bash
+npm run watch
 ```
 
 ## Deployment
