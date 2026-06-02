@@ -79,3 +79,6 @@ The site deploys via GitHub Actions on every push to the main branch. The workfl
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
+- [Visual Effects](unit-3/visual-effects/index.html)
+- [Grid Layouts (Editorial)](unit-4/grid-layouts/editorial.html)
+- [Grid Layouts (Cards)](unit-4/grid-layouts/cards.html)
