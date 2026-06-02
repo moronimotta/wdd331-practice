@@ -1,0 +1,30 @@
+/* Editorial layout using named grid areas and logical properties */
+.editorial-page main { padding-inline: 1rem; padding-block: 1rem; }
+
+.editorial-page .layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 18rem;
+  grid-template-areas:
+    "content sidebar";
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.editorial-page .content { grid-area: content; background: var(--color-surface); padding: 1rem; border-radius: var(--radius-md); }
+.editorial-page .sidebar { grid-area: sidebar; }
+.editorial-page .widget { background: color-mix(in srgb, var(--color-surface) 96%, var(--color-bg)); padding: 1rem; border-radius: var(--radius-sm); }
+
+/* Collapse to single column on narrower viewports */
+@media (max-width: 900px) {
+  .editorial-page .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "sidebar";
+  }
+}
+
+/* Header nav: keep links on one line */
+.editorial-page .site-nav { display: flex; gap: 1rem; align-items: center; }
+

@@ -1,0 +1,27 @@
+/* Responsive card grid using auto-fit and minmax with min() safety */
+.articles-page .card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.articles-page .card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.articles-page .card .placeholder { width: 100%; height: 120px; display: block; }
+
+.articles-page .card-body { display: flex; flex-direction: column; gap: 0.5rem; padding: 1rem; flex: 1 1 auto; }
+.articles-page .card-body p { margin: 0; color: var(--color-text-muted); }
+
+.articles-page .read-more { margin-top: auto; align-self: start; font-weight: 700; text-decoration: none; }
+
