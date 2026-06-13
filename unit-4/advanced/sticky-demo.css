@@ -1,0 +1,59 @@
+:root { --sticky-offset: 1rem; }
+
+.page-grid {
+  display: grid;
+  grid-template-columns: minmax(16rem, 20rem) minmax(0, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  position: relative;
+}
+
+.sticky-shell {
+  position: sticky;
+  top: var(--sticky-offset);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-surface) 88%, var(--color-border));
+  padding: 1rem;
+}
+
+.sticky-frame {
+  /* The overflow bug was here: `overflow: hidden` on this ancestor stopped sticky from working.
+     The fix was to keep the rounded-corner visual treatment on this shell, but avoid overflow on
+     the element between the sticky box and the scroll container so `position: sticky` can stick. */
+  overflow: visible;
+  border-radius: 0.75rem;
+}
+
+.toc {
+  background: var(--color-surface);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 0.06);
+}
+
+.toc h3 {
+  margin-top: 0;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.content article {
+  padding: 2rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.content h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .page-grid { grid-template-columns: 1fr; }
+  .sidebar { order: -1; }
+}
