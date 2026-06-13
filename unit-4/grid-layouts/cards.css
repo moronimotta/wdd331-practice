@@ -36,6 +36,7 @@
   .articles-page .card {
     display: grid;
     grid-template-rows: subgrid; 
+    grid-row: span 4;
     align-items: start;
   }
 
