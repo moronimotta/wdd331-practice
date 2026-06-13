@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unit 4 — Responsive Cards</title>
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <link rel="stylesheet" href="cards.css">
+</head>
+<body class="articles-page">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="#">Articles</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <h1>Featured Articles</h1>
+      <p class="lede">Exploring modern CSS layout techniques.</p>
+    </header>
+
+    <section class="card-grid">
+      <article class="card">
+        <div class="placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#cfe9ff,#9fd3ff);"></div>
+        <h3 class="card-title">Named Grid Areas</h3>
+        <div class="card-content">
+          <p>Define your layout with readable area names instead of column and row numbers.</p>
+        </div>
+        <div class="card-footer"><a class="read-more" href="#">Read more</a></div>
+      </article>
+
+      <article class="card">
+        <div class="placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#ffd9d9,#ffc3b3);"></div>
+        <h3 class="card-title">Responsive Tracks</h3>
+        <div class="card-content">
+          <p>Let the browser decide how many columns fit using auto-fit and minmax.</p>
+        </div>
+        <div class="card-footer"><a class="read-more" href="#">Read more</a></div>
+      </article>
+
+      <article class="card">
+        <div class="placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#e7ffd6,#d7ffb3);"></div>
+        <h3 class="card-title">Flexbox Patterns</h3>
+        <div class="card-content">
+          <p>Use content-driven sizing when items should determine their own width.</p>
+        </div>
+        <div class="card-footer"><a class="read-more" href="#">Read more</a></div>
+      </article>
+
+      <article class="card">
+        <div class="placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#efe6ff,#d6c8ff);"></div>
+        <h3 class="card-title">Intrinsic Sizing</h3>
+        <div class="card-content">
+          <p>Use min-content, max-content, and fit-content to let content drive size.</p>
+        </div>
+        <div class="card-footer"><a class="read-more" href="#">Read more</a></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Unit 4 — Grid Layouts</p>
+  </footer>
+</body>
+</html>

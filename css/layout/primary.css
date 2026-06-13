@@ -1,0 +1,44 @@
+@layer layout {
+    .site-shell {
+        width: min(100%, var(--content-width));
+        margin-inline: auto;
+        padding-block: clamp(var(--space-lg), 4vw, var(--space-2xl));
+        display: grid;
+        gap: var(--space-xl);
+    }
+
+    .site-header {
+        display: grid;
+        gap: var(--space-sm);
+        justify-items: start;
+        padding-block-end: var(--space-lg);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .site-footer {
+        display: grid;
+        gap: var(--space-xs);
+        justify-items: center;
+        padding-block: var(--space-lg);
+        border-top: 1px solid var(--color-border);
+        color: var(--color-text-muted);
+        font-size: 0.875rem;
+        text-align: center;
+    }
+
+    .hero {
+        display: grid;
+        gap: var(--space-md);
+    }
+
+    .hero p {
+        max-width: 62ch;
+        color: var(--color-text-muted);
+        font-size: 1.125rem;
+    }
+
+    main {
+        display: grid;
+        gap: var(--space-xl);
+    }
+}

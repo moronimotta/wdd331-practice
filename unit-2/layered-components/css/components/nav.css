@@ -1,0 +1,64 @@
+.site-nav {
+    background-color: var(--header-bg);
+    padding: var(--space-md) 0;
+    box-shadow: var(--shadow-md);
+
+    a,
+    ul {
+        max-width: 64rem;
+        margin-inline: auto;
+        padding-inline: var(--space-md);
+    }
+
+    a:first-child {
+        color: var(--header-text);
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: var(--space-md);
+
+        &:hover {
+            color: var(--color-border-strong);
+            text-decoration: none;
+        }
+
+        &:focus-visible {
+            outline: var(--border-width) solid var(--color-border-strong);
+            outline-offset: 2px;
+            border-radius: var(--border-radius-sm);
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: var(--space-lg);
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        color: color-mix(in srgb, var(--header-text) 85%, transparent);
+        font-weight: 500;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--border-radius-sm);
+        transition: all 150ms ease;
+
+        &:hover {
+            color: var(--header-text);
+            background-color: color-mix(in srgb, var(--header-text) 10%, transparent);
+            text-decoration: none;
+        }
+
+        &[aria-current="page"] {
+            color: var(--color-border-strong);
+            background-color: color-mix(in srgb, var(--header-text) 15%, transparent);
+            font-weight: 600;
+        }
+
+        &:focus-visible {
+            outline: var(--border-width) solid var(--color-border-strong);
+            outline-offset: 2px;
+        }
+    }
+}

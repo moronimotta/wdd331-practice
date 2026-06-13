@@ -1,0 +1,48 @@
+:root {
+    --font-family-sans: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    --font-family-mono: monospace;
+    --font-size-sm: 1.4rem;
+    --font-size-md: 1.6rem;
+    --font-size-lg: 1.8rem;
+
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    --transition-base: 0.2s ease;
+
+    --icon-size-sm: 24px;
+    --icon-size-md: 32px;
+
+    --outline-width: 2px;
+
+    --space-xs: var(--spacing-xs);
+    --space-sm: var(--spacing-sm);
+    --space-md: var(--spacing-md);
+    --space-lg: var(--spacing-lg);
+    --space-xl: var(--spacing-xl);
+    --space-2xl: calc(var(--spacing-xl) + var(--spacing-xl));
+
+    --font-family: var(--font-family-sans);
+    --font-family-serif: Georgia, "Times New Roman", serif;
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.75;
+
+    --border-radius-sm: var(--radius-sm);
+    --border-radius: var(--radius-md);
+    --border-radius-lg: var(--radius-lg);
+    --border-width: 2px;
+    --border-left-accent: 6px;
+
+    --shadow-color: light-dark(rgb(0 0 0 / 0.09), rgb(0 0 0 / 0.28));
+    --shadow-sm: 0 1px 2px 0 var(--shadow-color);
+    --shadow-md: 0 1px 3px 0 var(--shadow-color);
+    --shadow-lg: 0 8px 24px 0 var(--shadow-color);
+}

@@ -1,0 +1,15 @@
+@layer utilities {
+    .stack-sm {
+        display: grid;
+        gap: var(--space-sm);
+    }
+
+    .stack-md {
+        display: grid;
+        gap: var(--space-md);
+    }
+
+    .text-muted {
+        color: var(--color-text-muted);
+    }
+}

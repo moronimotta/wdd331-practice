@@ -1,0 +1,41 @@
+@layer components {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        gap: var(--space-md);
+    }
+
+    .card-group {
+        display: grid;
+        gap: var(--space-md);
+    }
+
+    .assignment-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        padding: var(--space-md);
+        display: grid;
+        gap: var(--space-sm);
+        box-shadow: var(--shadow-card);
+        transition: transform 140ms ease, box-shadow 140ms ease;
+    }
+
+    .assignment-card h4 {
+        font-size: 1.125rem;
+    }
+
+    .assignment-card p {
+        color: var(--color-text-muted);
+    }
+
+    .assignment-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .assignment-card a {
+        justify-self: start;
+        font-weight: 700;
+    }
+}

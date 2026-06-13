@@ -1,0 +1,11 @@
+{
+  "name": "wdd331-practice",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js && node -e \"require('fs').watch('css', { recursive: true }, () => require('child_process').exec('node build.js'))\""
+  },
+  "devDependencies": {
+    "lightningcss": "^1.32.0"
+  }
+}
