@@ -1,5 +1,3 @@
-@layer tokens, base, layout, components, utilities;
-
 @import url("tokens/colors.css") layer(tokens);
 @import url("tokens/variables.css") layer(tokens);
 
@@ -14,3 +12,13 @@
 @import url("components/effects.css") layer(components);
 
 @import url("utilities/utilities.css") layer(utilities);
+
+@layer tokens, base, layout, components, utilities;
+
+@font-face {
+	font-family: "Fraunces";
+	font-style: normal;
+	font-weight: 400 700;
+	font-display: swap;
+	src: url("../fonts/fraunces/Fraunces-latin.woff2") format("woff2");
+}

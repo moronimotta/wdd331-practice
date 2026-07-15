@@ -11,5 +11,7 @@
 
     .text-muted {
         color: var(--color-text-muted);
+        font-size: var(--font-size-caption);
+        line-height: var(--line-caption);
     }
 }

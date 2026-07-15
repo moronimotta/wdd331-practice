@@ -21,10 +21,6 @@
         transition: transform 140ms ease, box-shadow 140ms ease;
     }
 
-    .assignment-card h4 {
-        font-size: 1.125rem;
-    }
-
     .assignment-card p {
         color: var(--color-text-muted);
     }
