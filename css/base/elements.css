@@ -68,4 +68,84 @@
     p {
         margin-bottom: var(--space-md);
     }
+
+    :is(input, textarea, select, button) {
+        font: inherit;
+        color: inherit;
+    }
+
+    label {
+        font-weight: 700;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        width: 100%;
+        padding: 0.8rem 0.95rem;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-surface);
+        color: var(--color-text);
+        box-shadow: var(--shadow-sm);
+        transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    input[type='text']:focus-visible,
+    input[type='email']:focus-visible,
+    textarea:focus-visible {
+        outline: none;
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 4px var(--color-ring, color-mix(in srgb, var(--color-accent) 28%, transparent));
+    }
+
+    textarea {
+        min-height: 12rem;
+        max-height: 22rem;
+        resize: vertical;
+        field-sizing: content;
+    }
+
+    .form-field {
+        display: grid;
+        gap: var(--space-xs);
+    }
+
+    .form-hint {
+        margin: 0;
+        color: var(--color-text-muted);
+        font-size: var(--font-size-caption);
+        line-height: var(--line-caption);
+    }
+
+    .form-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        align-items: center;
+    }
+
+    .button,
+    button[type='submit'] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.2rem;
+        border: 1px solid transparent;
+        border-radius: var(--radius-pill);
+        background: var(--color-accent);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: var(--shadow-sm);
+        cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus-visible,
+    button[type='submit']:hover,
+    button[type='submit']:focus-visible {
+        background: var(--color-accent-hover);
+        box-shadow: var(--shadow-md);
+    }
 }

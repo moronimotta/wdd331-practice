@@ -46,6 +46,14 @@ The site now uses a modular type scale in `css/tokens/variables.css` built on a 
 
 Headings use a self-hostable web font loaded with `display=swap` so the fallback stack stays readable while the font loads.
 
+## Resume and Contact
+
+The portfolio now includes a printable [resume page](resume.html) and a [contact page](contact.html). The resume is styled for both screen and print, and the contact form uses the shared accent color so native controls match the site theme.
+
+## Token Audit
+
+Unused typography and color aliases were removed from the token files so the shared design system stays focused on tokens that are actually consumed elsewhere in the CSS.
+
 
 ## Build Tool
 - **Tool:** Lightning CSS (lightningcss)
@@ -83,6 +91,8 @@ The site deploys via GitHub Actions on every push to the main branch. The workfl
 
 ## Pages
 - [Home](index.html)
+- [Resume](resume.html)
+- [Contact](contact.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
 - [Visual Effects](unit-3/visual-effects/index.html)
