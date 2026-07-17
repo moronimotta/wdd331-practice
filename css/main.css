@@ -8,6 +8,7 @@
 
 @import url("components/nav.css") layer(components);
 @import url("components/cards.css") layer(components);
+@import url("components/icons.css") layer(components);
 @import url("components/theme-toggle.css") layer(components);
 @import url("components/effects.css") layer(components);
 

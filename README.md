@@ -100,3 +100,4 @@ The site deploys via GitHub Actions on every push to the main branch. The workfl
 - [Grid Layouts (Cards)](unit-4/grid-layouts/cards.html)
 - [Container Query Demo](unit-4/advanced/container-demo.html)
 - [Sticky Module Demo](unit-4/advanced/sticky-demo.html)
+- [Motion](unit-6/motion/index.html)

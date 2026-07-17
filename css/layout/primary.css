@@ -108,8 +108,22 @@
         margin: 0;
     }
 
+    .resume-contact-list a,
+    .resume-profile-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+    }
+
     .resume-meta li {
         color: var(--color-text-muted);
+    }
+
+    .resume-profile-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        margin-top: var(--space-sm);
     }
 
     .experience-item,
