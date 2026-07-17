@@ -8,18 +8,7 @@
         --seed-text-muted: #617187;
         --seed-accent: oklch(0.55 0.2 260);
         --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 80%, black);
-        --seed-link: var(--seed-accent);
-        --seed-link-hover: var(--seed-accent-hover);
         --seed-border: #d9d3c9;
-        --seed-border-strong: #c7c0b4;
-
-        --accent-200: color-mix(in oklch, var(--seed-accent) 30%, white);
-        --accent-300: color-mix(in oklch, var(--seed-accent) 50%, white);
-        --accent-400: color-mix(in oklch, var(--seed-accent) 75%, white);
-        --accent-500: var(--seed-accent);
-        --accent-600: color-mix(in oklch, var(--seed-accent) 80%, black);
-        --accent-700: color-mix(in oklch, var(--seed-accent) 60%, black);
-        --accent-800: color-mix(in oklch, var(--seed-accent) 40%, black);
     }
 
     html:has(input[name='theme-preference'][value='dark']:checked) {
@@ -36,16 +25,13 @@
     html {
         --color-bg: light-dark(var(--seed-bg), oklch(0.18 0.02 260));
         --color-surface: light-dark(var(--seed-surface), oklch(0.22 0.03 260));
-        --color-surface-strong: light-dark(#ffffff, oklch(0.26 0.03 260));
         --color-text: light-dark(var(--seed-text), oklch(0.88 0.02 260));
         --color-text-muted: light-dark(var(--seed-text-muted), oklch(0.68 0.03 250));
         --color-accent: light-dark(var(--seed-accent), oklch(0.62 0.15 240));
         --color-accent-hover: light-dark(var(--seed-accent-hover), oklch(0.68 0.18 240));
-        --color-link: light-dark(var(--seed-link), oklch(0.65 0.16 240));
-        --color-link-hover: light-dark(var(--seed-link-hover), oklch(0.72 0.18 240));
+        --color-link: light-dark(var(--seed-accent), oklch(0.65 0.16 240));
+        --color-link-hover: light-dark(var(--seed-accent-hover), oklch(0.72 0.18 240));
         --color-border: light-dark(var(--seed-border), oklch(0.32 0.02 260));
-        --color-border-strong: light-dark(var(--seed-border-strong), oklch(0.38 0.02 260));
-        --color-ring: color-mix(in srgb, var(--color-accent) 28%, transparent);
         --header-bg: var(--color-accent);
         --header-text: light-dark(#ffffff, #f0f4f8);
         --theme-toggle-bg: color-mix(in srgb, var(--header-text) 20%, var(--header-bg));
@@ -56,6 +42,5 @@
 
         --color-primary: var(--color-link);
         --color-primary-hover: var(--color-link-hover);
-        --color-accent-soft: color-mix(in oklch, var(--color-accent) 16%, var(--color-surface));
     }
 }

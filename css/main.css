@@ -1,5 +1,3 @@
-@layer tokens, base, layout, components, utilities;
-
 @import url("tokens/colors.css") layer(tokens);
 @import url("tokens/variables.css") layer(tokens);
 
@@ -10,7 +8,102 @@
 
 @import url("components/nav.css") layer(components);
 @import url("components/cards.css") layer(components);
+@import url("components/icons.css") layer(components);
 @import url("components/theme-toggle.css") layer(components);
 @import url("components/effects.css") layer(components);
 
 @import url("utilities/utilities.css") layer(utilities);
+
+@layer tokens, base, layout, components, utilities;
+
+@font-face {
+	font-family: "Fraunces";
+	font-style: normal;
+	font-weight: 400 700;
+	font-display: swap;
+	src: url("../fonts/fraunces/Fraunces-latin.woff2") format("woff2");
+}
+
+@media print {
+	@page {
+		margin: 0.75in;
+	}
+
+	:root {
+		color-scheme: light;
+	}
+
+	body.resume-page {
+		padding: 0;
+		background: #fff;
+		color: #000;
+		font-family: Georgia, "Times New Roman", serif;
+		font-size: 11pt;
+		line-height: 1.45;
+	}
+
+	body.resume-page .site-shell {
+		width: 100%;
+		max-width: none;
+		gap: 0.35in;
+	}
+
+	body.resume-page .site-nav,
+	body.resume-page .theme-menu,
+	body.resume-page .site-footer,
+	body.resume-page .no-print,
+	body.contact-page .site-nav,
+	body.contact-page .theme-menu,
+	body.contact-page .site-footer {
+		display: none !important;
+	}
+
+	body.resume-page a[href]::after {
+		content: " (" attr(href) ")";
+		font-size: 9pt;
+		word-break: break-all;
+	}
+
+	body.resume-page .resume-header,
+	body.resume-page .resume-section,
+	body.resume-page .experience-item,
+	body.resume-page .project-item,
+	body.resume-page .resume-contact,
+	body.resume-page .contact-card {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+
+	body.resume-page p,
+	body.resume-page li,
+	body.resume-page dd {
+		orphans: 3;
+		widows: 3;
+	}
+
+	body.resume-page .resume-header,
+	body.resume-page .resume-section-title {
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+
+	body.resume-page .resume-header {
+		background: #fff;
+		box-shadow: none;
+		border-color: #999;
+	}
+
+	body.resume-page .resume-section,
+	body.resume-page .resume-summary,
+	body.resume-page .resume-contact,
+	body.resume-page .contact-card,
+	body.resume-page .assignment-card {
+		background: #fff;
+		box-shadow: none;
+	}
+
+	body.resume-page .resume-section-title {
+		color: #000;
+		background: #e6e6e6;
+	}
+}

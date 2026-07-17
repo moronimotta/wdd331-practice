@@ -10,8 +10,8 @@ This repository is my Practice Site for WDD 331R: Advanced CSS. Each week I add 
 ```
 css/
 ├── tokens/              # Design system tokens
-│   ├── colors.css       # Color palette
-│   └── variables.css    # Spacing, typography, shadows, radius
+│   ├── colors.css       # Color palette and semantic color roles
+│   └── variables.css    # Modular type scale, spacing, shadows, radius
 ├── base/                # Foundational styles
 │   ├── reset.css        # CSS reset and box-sizing
 │   └── elements.css     # Semantic element styling (body, headings, links)
@@ -39,6 +39,20 @@ dist/
 3. **Layout** - Page structure and spatial relationships
 4. **Components** - Reusable UI patterns, including the theme toggle
 5. **Utilities** - Single-purpose helper classes
+
+## Typography System
+
+The site now uses a modular type scale in `css/tokens/variables.css` built on a 1.2 ratio. The body size is fluid with `clamp()`, and the larger steps derive from that base so the whole hierarchy grows together across viewport widths. Semantic aliases map the scale to roles like body, caption, heading, and display.
+
+Headings use a self-hostable web font loaded with `display=swap` so the fallback stack stays readable while the font loads.
+
+## Resume and Contact
+
+The portfolio now includes a printable [resume page](resume.html) and a [contact page](contact.html). The resume is styled for both screen and print, and the contact form uses the shared accent color so native controls match the site theme.
+
+## Token Audit
+
+Unused typography and color aliases were removed from the token files so the shared design system stays focused on tokens that are actually consumed elsewhere in the CSS.
 
 
 ## Build Tool
@@ -77,6 +91,8 @@ The site deploys via GitHub Actions on every push to the main branch. The workfl
 
 ## Pages
 - [Home](index.html)
+- [Resume](resume.html)
+- [Contact](contact.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
 - [Visual Effects](unit-3/visual-effects/index.html)
@@ -84,3 +100,4 @@ The site deploys via GitHub Actions on every push to the main branch. The workfl
 - [Grid Layouts (Cards)](unit-4/grid-layouts/cards.html)
 - [Container Query Demo](unit-4/advanced/container-demo.html)
 - [Sticky Module Demo](unit-4/advanced/sticky-demo.html)
+- [Motion](unit-6/motion/index.html)

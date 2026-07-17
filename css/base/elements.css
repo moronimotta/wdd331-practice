@@ -5,9 +5,9 @@
     }
 
     body {
-        font-family: var(--font-body);
-        font-size: var(--font-size-base);
-        line-height: var(--line-normal);
+        font-family: var(--font-family-body);
+        font-size: var(--font-size-body);
+        line-height: var(--line-body);
         color: var(--color-text);
         background: radial-gradient(circle at top left, color-mix(in oklch, var(--color-accent) 18%, transparent), transparent 34%), linear-gradient(180deg, color-mix(in oklch, var(--color-surface) 92%, var(--color-bg)) 0%, var(--color-bg) 42%, color-mix(in oklch, var(--color-bg) 94%, var(--color-surface)) 100%);
         padding: clamp(1rem, 2.5vw, 2.5rem);
@@ -26,27 +26,126 @@
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-heading);
-        line-height: var(--line-tight);
+        font-family: var(--font-family-heading);
+        line-height: var(--line-heading);
         color: var(--color-text);
     }
 
     h1 {
-        font-size: clamp(1.75rem, 5vw, 2.5rem);
+        font-size: var(--font-size-display);
         margin-bottom: var(--space-md);
     }
 
     h2 {
-        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-size: var(--font-size-heading-lg);
         margin-bottom: var(--space-md);
     }
 
     h3 {
-        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        font-size: var(--font-size-heading-sm);
         margin-bottom: var(--space-sm);
+    }
+
+    h4 {
+        font-size: var(--font-size-body-lg);
+    }
+
+    h5 {
+        font-size: var(--font-size-body);
+    }
+
+    h6 {
+        font-size: var(--font-size-caption);
+    }
+
+    .hero-text {
+        max-width: 42ch;
+        font-size: var(--font-size-body-lg);
+        line-height: var(--line-body);
+        color: var(--color-text-muted);
     }
 
     p {
         margin-bottom: var(--space-md);
+    }
+
+    :is(input, textarea, select, button) {
+        font: inherit;
+        color: inherit;
+    }
+
+    label {
+        font-weight: 700;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        width: 100%;
+        padding: 0.8rem 0.95rem;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-surface);
+        color: var(--color-text);
+        box-shadow: var(--shadow-sm);
+        transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    input[type='text']:focus-visible,
+    input[type='email']:focus-visible,
+    textarea:focus-visible {
+        outline: none;
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 4px var(--color-ring, color-mix(in srgb, var(--color-accent) 28%, transparent));
+    }
+
+    textarea {
+        min-height: 12rem;
+        max-height: 22rem;
+        resize: vertical;
+        field-sizing: content;
+    }
+
+    .form-field {
+        display: grid;
+        gap: var(--space-xs);
+    }
+
+    .form-hint {
+        margin: 0;
+        color: var(--color-text-muted);
+        font-size: var(--font-size-caption);
+        line-height: var(--line-caption);
+    }
+
+    .form-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        align-items: center;
+    }
+
+    .button,
+    button[type='submit'] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.2rem;
+        border: 1px solid transparent;
+        border-radius: var(--radius-pill);
+        background: var(--color-accent);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: var(--shadow-sm);
+        cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus-visible,
+    button[type='submit']:hover,
+    button[type='submit']:focus-visible {
+        background: var(--color-accent-hover);
+        box-shadow: var(--shadow-md);
     }
 }

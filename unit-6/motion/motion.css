@@ -1,0 +1,444 @@
+@media (prefers-reduced-motion: no-preference) {
+    .site-header nav a,
+    .nav-cta,
+    .btn,
+    .card,
+    .card-link {
+        transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    }
+
+    .site-header nav a {
+        transition-duration: 160ms;
+        transition-timing-function: ease-out;
+    }
+
+    .nav-cta {
+        transition-duration: 200ms;
+        transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .site-header nav a:hover,
+    .site-header nav a:focus-visible {
+        transform: translateY(-1px);
+        transition-duration: 120ms;
+    }
+
+    .nav-cta:hover,
+    .nav-cta:focus-visible {
+        transform: translateY(-2px) scale(1.01);
+        transition-duration: 150ms;
+    }
+
+    .btn {
+        transition-duration: 160ms;
+        transition-timing-function: ease-out;
+    }
+
+    .btn-primary {
+        transition-duration: 180ms;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-secondary,
+    .btn-ghost {
+        transition-duration: 140ms;
+        transition-timing-function: ease-out;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+        transform: translateY(-1px);
+        transition-duration: 110ms;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+        transform: translateY(-2px);
+        transition-duration: 140ms;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+        transform: translateY(-1px);
+        transition-duration: 110ms;
+    }
+
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+        transform: translateY(-1px);
+        transition-duration: 100ms;
+    }
+
+    .card {
+        transition-duration: 180ms;
+        transition-timing-function: ease-out;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        transition-duration: 140ms;
+    }
+
+    .card-link {
+        transition-duration: 140ms;
+        transition-timing-function: ease-out;
+    }
+
+    .card-link:hover,
+    .card-link:focus-visible {
+        transform: translateX(2px);
+        transition-duration: 100ms;
+    }
+
+    .status-badge {
+        animation: status-pulse 1.8s ease-in-out infinite alternate;
+    }
+
+    .card {
+        animation: card-entrance 520ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .card:nth-child(2) {
+        animation-delay: 90ms;
+    }
+
+    .card:nth-child(3) {
+        animation-delay: 180ms;
+    }
+
+    .card:nth-child(4) {
+        animation-delay: 270ms;
+    }
+
+    .card:nth-child(5) {
+        animation-delay: 360ms;
+    }
+
+    .card:nth-child(6) {
+        animation-delay: 450ms;
+    }
+
+    @keyframes status-pulse {
+        from {
+            transform: scale(1);
+            opacity: 0.86;
+        }
+
+        to {
+            transform: scale(1.06);
+            opacity: 1;
+        }
+    }
+
+    @keyframes card-entrance {
+        from {
+            transform: translateY(14px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto;
+    }
+
+    .site-header nav a,
+    .nav-cta,
+    .btn,
+    .card,
+    .card-link {
+        transition-duration: 1ms;
+        transition-delay: 0ms;
+    }
+
+    .site-header nav a:hover,
+    .site-header nav a:focus-visible,
+    .nav-cta:hover,
+    .nav-cta:focus-visible,
+    .btn:hover,
+    .btn:focus-visible,
+    .card:hover,
+    .card-link:hover,
+    .card-link:focus-visible {
+        transform: none;
+    }
+
+    .status-badge {
+        animation: status-still 6s ease-in-out infinite alternate;
+        opacity: 1;
+    }
+
+    .card {
+        animation: none;
+        opacity: 1;
+    }
+
+    @keyframes status-still {
+        from {
+            opacity: 0.9;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-body);
+    color: var(--color-text);
+    background: radial-gradient(circle at top, color-mix(in oklch, var(--color-accent) 10%, transparent), transparent 32%), var(--color-bg);
+}
+
+.site-header,
+main {
+    width: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) 0;
+}
+
+.site-name {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--color-text-muted);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    color: var(--color-text);
+    background: color-mix(in oklch, var(--color-surface) 90%, var(--color-bg));
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--color-primary);
+    background: var(--color-surface);
+    border-color: var(--color-border-strong);
+    box-shadow: var(--shadow-md);
+}
+
+.nav-cta {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: transparent;
+}
+
+.nav-cta:hover,
+.nav-cta:focus-visible {
+    background: var(--color-accent-hover);
+    color: #fff;
+}
+
+main {
+    display: grid;
+    gap: var(--space-xl);
+    padding-block: var(--space-lg) var(--space-xl);
+}
+
+.dashboard-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    align-items: end;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, color-mix(in oklch, var(--color-surface) 96%, var(--color-accent)), var(--color-surface));
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-header h1,
+.dashboard-header p,
+.status-label,
+.card h2,
+.card p {
+    margin: 0;
+}
+
+.dashboard-header h1 {
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: var(--line-display);
+}
+
+.dashboard-header p {
+    color: var(--color-text-muted);
+}
+
+.status {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4.5rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    box-shadow: var(--shadow-sm);
+}
+
+.status-label {
+    color: var(--color-text-muted);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.btn {
+    border: 1px solid transparent;
+    border-radius: var(--radius-pill);
+    padding: 0.85rem 1.2rem;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background: var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background: var(--color-accent-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    color: var(--color-text);
+    background: var(--color-surface);
+    border-color: var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background: color-mix(in oklch, var(--color-surface) 82%, var(--color-accent));
+    border-color: var(--color-border-strong);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-ghost {
+    color: var(--color-text-muted);
+    background: transparent;
+    border-color: var(--color-border);
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+    color: var(--color-text);
+    background: color-mix(in oklch, var(--color-surface) 88%, var(--color-accent));
+    border-color: var(--color-border-strong);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-md);
+}
+
+.card {
+    display: grid;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-strong);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    align-items: start;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    line-height: 1.15;
+}
+
+.card-tag {
+    display: inline-flex;
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--radius-pill);
+    background: color-mix(in oklch, var(--color-surface) 78%, var(--color-accent));
+    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.card-tag--active {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.card-tag--pending {
+    background: color-mix(in oklch, var(--color-surface) 84%, var(--color-text-muted));
+    color: var(--color-text-muted);
+}
+
+.card p {
+    color: var(--color-text-muted);
+}
+
+.card-link {
+    justify-self: start;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.18em;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+    color: var(--color-primary-hover);
+}
