@@ -1,6 +1,6 @@
 @layer layout {
     .site-shell {
-        width: min(100%, var(--content-width));
+        width: min(calc(100vw - (2 * clamp(1rem, 2.5vw, 2.5rem))), var(--content-width));
         margin-inline: auto;
         padding-block: clamp(var(--space-lg), 4vw, var(--space-2xl));
         display: grid;
@@ -9,30 +9,60 @@
 
     .site-header {
         display: grid;
-        gap: var(--space-sm);
-        justify-items: start;
-        padding-block-end: var(--space-lg);
-        border-bottom: 1px solid var(--color-border);
+        gap: var(--space-lg);
     }
 
     .site-footer {
         display: grid;
-        gap: var(--space-xs);
+        gap: var(--space-md);
         justify-items: center;
-        padding-block: var(--space-lg);
-        border-top: 1px solid var(--color-border);
+        padding: var(--space-lg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        background: var(--color-surface);
+        box-shadow: var(--shadow-sm);
         color: var(--color-text-muted);
         font-size: var(--font-size-caption);
         line-height: var(--line-caption);
         text-align: center;
     }
 
-    .hero {
+    .page-header {
+        padding: clamp(var(--space-lg), 3vw, var(--space-xl));
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        background: linear-gradient(145deg, color-mix(in oklch, var(--color-accent) 12%, var(--color-surface)), var(--color-surface));
+        box-shadow: var(--shadow-md);
+    }
+
+    .page-header__top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--space-md) var(--space-lg);
+    }
+
+    .page-brand {
         display: grid;
         gap: var(--space-md);
     }
 
-    .hero p {
+    .page-brand h1 {
+        margin-bottom: 0;
+    }
+
+    .page-kicker,
+    .section-eyebrow {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-size: var(--font-size-caption);
+        color: var(--color-text-muted);
+    }
+
+    .page-intro,
+    .section-intro {
         max-width: 62ch;
         color: var(--color-text-muted);
         font-size: var(--font-size-body-lg);
@@ -44,29 +74,42 @@
         gap: var(--space-xl);
     }
 
+    .page-header__actions {
+        display: grid;
+        gap: var(--space-md);
+        justify-items: start;
+    }
+
+    .page-footer__links {
+        justify-content: center;
+    }
+
+    .page-footer__meta {
+        display: grid;
+        gap: var(--space-xs);
+        justify-items: center;
+    }
+
+    .content-section,
+    .home-hero,
+    .section-heading {
+        display: grid;
+        gap: var(--space-md);
+    }
+
+    .section-heading {
+        max-width: 44rem;
+    }
+
     .resume-page .site-shell,
     .contact-page .site-shell {
-        width: min(100%, 64rem);
+        width: min(calc(100vw - (2 * clamp(1rem, 2.5vw, 2.5rem))), 64rem);
     }
 
     .resume-layout,
     .contact-layout {
         display: grid;
         gap: var(--space-lg);
-    }
-
-    .resume-page .site-header,
-    .contact-page .site-header {
-        padding-block-end: var(--space-md);
-    }
-
-    .resume-header,
-    .contact-header {
-        background: linear-gradient(135deg, color-mix(in oklch, var(--color-accent) 15%, var(--color-surface)), var(--color-surface));
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-lg);
-        padding: var(--space-lg);
-        box-shadow: var(--shadow-md);
     }
 
     .resume-contact,

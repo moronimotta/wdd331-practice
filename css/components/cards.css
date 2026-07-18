@@ -14,11 +14,11 @@
         background: var(--color-surface);
         border: 1px solid var(--color-border);
         border-radius: var(--radius-lg);
-        padding: var(--space-md);
+        padding: var(--space-lg);
         display: grid;
         gap: var(--space-sm);
         box-shadow: var(--shadow-card);
-        transition: transform 140ms ease, box-shadow 140ms ease;
+        transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
     }
 
     .assignment-card p {
@@ -26,8 +26,9 @@
     }
 
     .assignment-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-5px);
         box-shadow: var(--shadow-lg);
+        border-color: color-mix(in oklch, var(--color-border) 70%, var(--color-accent));
     }
 
     .assignment-card a {

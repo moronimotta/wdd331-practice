@@ -9,16 +9,47 @@
 </head>
 <body class="contact-page">
     <div class="site-shell">
-        <header class="site-header contact-header">
-            <p class="text-muted">Contact</p>
-            <h1>Get in touch</h1>
-            <p class="hero-text">Use this form to send a quick message about opportunities, collaboration, or portfolio feedback.</p>
-            <nav class="site-nav" aria-label="Portfolio pages">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                </ul>
-            </nav>
+        <header class="site-header page-header page-header--compact">
+            <div class="page-header__top">
+                <div class="page-brand">
+                    <p class="page-kicker">Contact</p>
+                    <h1>Get in touch</h1>
+                    <p class="page-intro">Use this form to ask about opportunities, collaboration, or anything on the portfolio that deserves a deeper conversation.</p>
+                </div>
+
+                <div class="page-header__actions">
+                    <nav class="site-nav" aria-label="Portfolio pages">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#featured">Featured Work</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                        </ul>
+                    </nav>
+
+                    <details class="theme-menu">
+                        <summary class="theme-control">
+                            <span class="visually-hidden">Color scheme</span>
+                        </summary>
+                        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+                            <label class="theme-control theme-pick" data-theme-pick="light">
+                                <input name="theme-preference" type="radio" value="light">
+                                <span aria-hidden="true">&#9788;&#65039;</span>
+                                <span class="visually-hidden">Light</span>
+                            </label>
+                            <label class="theme-control theme-pick" data-theme-pick="system">
+                                <input name="theme-preference" type="radio" value="system" checked>
+                                <span aria-hidden="true">&#9881;&#65039;</span>
+                                <span class="visually-hidden">System default</span>
+                            </label>
+                            <label class="theme-control theme-pick" data-theme-pick="dark">
+                                <input name="theme-preference" type="radio" value="dark">
+                                <span aria-hidden="true">&#127766;</span>
+                                <span class="visually-hidden">Dark</span>
+                            </label>
+                        </div>
+                    </details>
+                </div>
+            </div>
         </header>
 
         <main class="contact-layout">
@@ -59,6 +90,22 @@
                 <p>If you prefer email or social links, use the resume page contact details or reach out through the links on the homepage.</p>
             </aside>
         </main>
+
+        <footer class="site-footer page-footer">
+            <div class="page-footer__meta">
+                <p>Moroni Motta | WDD 331R Advanced CSS | Spring 2026</p>
+                <p>Reach out for opportunities, feedback, or project collaboration.</p>
+            </div>
+
+            <nav class="site-nav page-footer__links" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#featured">Featured Work</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
 </body>
 </html>

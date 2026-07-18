@@ -32,46 +32,78 @@
     </svg>
 
     <div class="site-shell">
-        <header class="site-header resume-header">
-            <p class="text-muted">Printable Resume</p>
-            <h1>Moroni Motta</h1>
-            <p class="hero-text">Full-stack developer focused on practical systems, dependable integrations, and thoughtful user experiences across backend and frontend work.</p>
-            <ul class="resume-contact-list" aria-label="Contact details">
-                <li>
-                    <a class="icon-list-item" href="tel:+12084192323">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-phone"></use></svg>
-                        <span>+1 208 419 2323</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon-list-item" href="mailto:moroni.art.motta@gmail.com">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-mail"></use></svg>
-                        <span>moroni.art.motta@gmail.com</span>
-                    </a>
-                </li>
-                <li class="icon-list-item">
-                    <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-map-pin"></use></svg>
-                    <span>Rexburg, Idaho</span>
-                </li>
-                <li>
-                    <a class="icon-link" href="https://www.linkedin.com/in/moronimotta/" aria-label="LinkedIn profile">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg>
-                        <span class="visually-hidden">LinkedIn profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon-link" href="https://github.com/moronimotta" aria-label="GitHub profile">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-globe"></use></svg>
-                        <span class="visually-hidden">GitHub profile</span>
-                    </a>
-                </li>
-            </ul>
-            <nav class="site-nav" aria-label="Portfolio pages">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <header class="site-header page-header page-header--compact">
+            <div class="page-header__top">
+                <div class="page-brand">
+                    <p class="page-kicker">Printable Resume</p>
+                    <h1>Moroni Motta</h1>
+                    <p class="page-intro">Full-stack developer focused on practical systems, dependable integrations, and thoughtful user experiences across backend and frontend work.</p>
+                </div>
+
+                <div class="page-header__actions">
+                    <ul class="resume-contact-list" aria-label="Contact details">
+                        <li>
+                            <a class="icon-list-item" href="tel:+12084192323">
+                                <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-phone"></use></svg>
+                                <span>+1 208 419 2323</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-list-item" href="mailto:moroni.art.motta@gmail.com">
+                                <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-mail"></use></svg>
+                                <span>moroni.art.motta@gmail.com</span>
+                            </a>
+                        </li>
+                        <li class="icon-list-item">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-map-pin"></use></svg>
+                            <span>Rexburg, Idaho</span>
+                        </li>
+                        <li>
+                            <a class="icon-link" href="https://www.linkedin.com/in/moronimotta/" aria-label="LinkedIn profile">
+                                <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg>
+                                <span class="visually-hidden">LinkedIn profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-link" href="https://github.com/moronimotta" aria-label="GitHub profile">
+                                <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#icon-globe"></use></svg>
+                                <span class="visually-hidden">GitHub profile</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <nav class="site-nav" aria-label="Portfolio pages">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#featured">Featured Work</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <details class="theme-menu">
+                        <summary class="theme-control">
+                            <span class="visually-hidden">Color scheme</span>
+                        </summary>
+                        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+                            <label class="theme-control theme-pick" data-theme-pick="light">
+                                <input name="theme-preference" type="radio" value="light">
+                                <span aria-hidden="true">&#9788;&#65039;</span>
+                                <span class="visually-hidden">Light</span>
+                            </label>
+                            <label class="theme-control theme-pick" data-theme-pick="system">
+                                <input name="theme-preference" type="radio" value="system" checked>
+                                <span aria-hidden="true">&#9881;&#65039;</span>
+                                <span class="visually-hidden">System default</span>
+                            </label>
+                            <label class="theme-control theme-pick" data-theme-pick="dark">
+                                <input name="theme-preference" type="radio" value="dark">
+                                <span aria-hidden="true">&#127766;</span>
+                                <span class="visually-hidden">Dark</span>
+                            </label>
+                        </div>
+                    </details>
+                </div>
+            </div>
         </header>
 
         <main class="resume-layout">
@@ -163,6 +195,22 @@
                 </aside>
             </div>
         </main>
+
+        <footer class="site-footer page-footer">
+            <div class="page-footer__meta">
+                <p>Moroni Motta | WDD 331R Advanced CSS | Spring 2026</p>
+                <p>Resume, contact, and featured work live together so employers can move quickly between the strongest pages.</p>
+            </div>
+
+            <nav class="site-nav page-footer__links" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#featured">Featured Work</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
 </body>
 </html>
