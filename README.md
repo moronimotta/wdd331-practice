@@ -50,6 +50,10 @@ Headings use a self-hostable web font loaded with `display=swap` so the fallback
 
 The portfolio now includes a printable [resume page](resume.html) and a [contact page](contact.html). The resume is styled for both screen and print, and the contact form uses the shared accent color so native controls match the site theme.
 
+## Portfolio Organization
+
+The homepage now acts as the portfolio front door. Featured work cards appear first, then the rest of the coursework is grouped by course theme so visitors can scan the site quickly without losing access to any assignment page.
+
 ## Token Audit
 
 Unused typography and color aliases were removed from the token files so the shared design system stays focused on tokens that are actually consumed elsewhere in the CSS.

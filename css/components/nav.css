@@ -4,6 +4,8 @@
         display: flex;
         flex-wrap: wrap;
         gap: var(--space-sm);
+        padding: 0;
+        margin: 0;
     }
 
     .site-nav a {
@@ -23,5 +25,9 @@
         box-shadow: var(--shadow-md);
         transform: translateY(-2px);
         color: var(--color-link-hover);
+    }
+
+    .page-footer .site-nav a {
+        background: color-mix(in oklch, var(--color-surface) 88%, var(--color-bg));
     }
 }

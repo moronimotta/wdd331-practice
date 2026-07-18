@@ -8,6 +8,7 @@
 
 @import url("components/nav.css") layer(components);
 @import url("components/cards.css") layer(components);
+@import url("components/home.css") layer(components);
 @import url("components/icons.css") layer(components);
 @import url("components/theme-toggle.css") layer(components);
 @import url("components/effects.css") layer(components);
@@ -48,12 +49,10 @@
 		gap: 0.35in;
 	}
 
-	body.resume-page .site-nav,
-	body.resume-page .theme-menu,
+	body.resume-page .page-header__actions,
 	body.resume-page .site-footer,
 	body.resume-page .no-print,
-	body.contact-page .site-nav,
-	body.contact-page .theme-menu,
+	body.contact-page .page-header__actions,
 	body.contact-page .site-footer {
 		display: none !important;
 	}
